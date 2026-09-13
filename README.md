@@ -23,8 +23,17 @@ The following custom DAX measures were developed to power the KPI cards and inte
 **Average Price Per Unit**
 ```dax
 Average = AVERAGE(Sales_Data[Price Per Unit])
+```
+**Total Units Sold**
+```dax
 Total Quantity = SUM(Sales_Data[Units Sold])
+```
+**Total Revenue Calculation**
+```dax
 Total Sales = SUMX(Sales_Data, Sales_Data[Units Sold] * Sales_Data[Price Per Unit])
+```
+**Total Number of Transactions**
+```dax
 Transactions = COUNTROWS(Sales_Data)
 ```
 
